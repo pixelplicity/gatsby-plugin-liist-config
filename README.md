@@ -41,6 +41,9 @@ The plugin uses the `gatsby-source-google-sheets` plugin to retrieve rows of key
           spreadsheetId: '1234',
           worksheetTitle: 'Settings',
           credentials: {/* service account credentials */},
+          imageSettings: [/* ... */],
+          themeSettings: {/* ... */},
+          fontKeys: [/* .. */]
         }
       ],
     };
@@ -72,9 +75,13 @@ This configuration:
 
 ```js
 {
-  key: 'GATSBY_LOGO',
-  dest: 'src/images',
-  outputName: 'logo'
+  imageSettings: [
+    {
+      key: 'GATSBY_LOGO',
+      dest: 'src/images',
+      outputName: 'logo',
+    },
+  ];
 }
 ```
 
@@ -86,31 +93,27 @@ Any settings with a key of the format `THEME[$secondary]` will be put into a cus
 
 If a variable's value requires a custom format, provide that in `themeSettings.formatters`. The key should be the theme variable and the function takes the value from the spreadsheet and must return a string to be written to the SCSS file.
 
-For example:
+For example a row with the key `THEME[$default]` and value `#00ff00` becomes:
 
-`THEME[$default] => #00ff00`
-becomes
 `$default: #00ff00;`
 
-With this configuration
+Adding a custom formatter:
 
 ```js
 {
   formatters: {
-    '$somethingSpecial': value => `'Something'`;
+    '$default': value => `'Something'`;
   }
 }
 ```
 
-Will results in:
+Now it becomes:
 
-`$somethingSpecial: 'Something';`
+`$default: 'Something';`
 
 ### Fonts
 
-Theme variables that are provided in the `fontKeys` optionseme settings but their output is a bit different. The two keys available are `THEME[$font-family-base]` and `THEME[$font-family-headers]`. These should be valid Google font.
-
-In addition to being output in `src/scss/_liist-config.scss`, they are also prefetched using the `gatsby-plugin-prefetch-google-fonts` plugin.
+Theme variables that are provided in the `fontKeys` options will be treated differently. In addition to being output in the generated SCSS files, they are also prefetched using the `gatsby-plugin-prefetch-google-fonts` plugin.
 
 ### Environment Variables
 
