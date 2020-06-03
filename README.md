@@ -4,7 +4,7 @@
 [![Maintainability](https://flat.badgen.net/codeclimate/maintainability/Aquilio/gatsby-plugin-liist-config)](https://codeclimate.com/github/Aquilio/gatsby-plugin-liist-config/maintainability)
 ![Dependabot](https://flat.badgen.net/dependabot/thepracticaldev/dev.to?icon=dependabot)
 
-A Gatsby plugin for pulling [https://liist.io] Liist config from a spreadsheet.
+A Gatsby plugin for pulling [Liist](https://liist.io) config from a spreadsheet.
 
 The plugin uses the `gatsby-source-google-sheets` plugin to retrieve rows of key-value pairs that configure a Liist site.
 
