@@ -83,7 +83,7 @@ const processTheme = async (_, rows, themeSettings) => {
           `Theme: Processing custom theme formatter for "${key}": ${value} => ${writeValue}`
         );
       }
-      return `${key}: ${value};`;
+      return `${key}: ${writeValue};`;
     })
     .join(`\n`);
   debug(`Theme: Writing theme scss file at src/scss/${themeSettings.output}`);
