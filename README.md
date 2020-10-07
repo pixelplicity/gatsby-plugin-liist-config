@@ -133,4 +133,4 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-[MIT](https://github.com/Aquilio/gatsby-plugin-liist-config/blob/master/LICENSE) © [Aquil.io](https://aquil.io)
+[MIT](https://github.com/pixelplicity/gatsby-plugin-liist-config/blob/master/LICENSE) © [Pixelplicity](https://github.com/pixelplicity)

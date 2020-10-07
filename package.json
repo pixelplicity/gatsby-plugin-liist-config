@@ -2,11 +2,11 @@
   "name": "gatsby-plugin-liist-config",
   "description": "A Gatsby plugin for pulling Liist config from a spreadsheet",
   "version": "0.0.2-beta.1",
-  "author": "Aquil.io <contact@aquil.io>",
+  "author": "Curtis Cummings <curtis@pixelplicity.com>",
   "license": "MIT",
-  "repository": "Aquilio/gatsby-plugin-liist-config",
+  "repository": "pixelplicity/gatsby-plugin-liist-config",
   "bugs": {
-    "url": "https://github.com/Aquilio/gatsby-plugin-liist-config/issues"
+    "url": "https://github.com/pixelplicity/gatsby-plugin-liist-config/issues"
   },
   "main": "index.js",
   "keywords": [
