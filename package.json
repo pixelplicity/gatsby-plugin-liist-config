@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-liist-config",
   "description": "A Gatsby plugin for pulling Liist config from a spreadsheet",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2",
   "author": "Curtis Cummings <curtis@pixelplicity.com>",
   "license": "MIT",
   "repository": "pixelplicity/gatsby-plugin-liist-config",
